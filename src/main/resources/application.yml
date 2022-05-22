@@ -1,8 +1,30 @@
 spring:
+  application:
+    name: inbox-app
   security:
     oauth2:
       client:
         registration:
           github:
-            client-id: <client_id>
-            client-secret: <client_secret>
+            client-id: Iv1.1db9ba79e622487f
+            client-secret: 3203b071fbc9286856070a643c7fc317f80cbc15
+  data:
+    cassandra:
+      keyspace-name: main
+      username: CjMZfLIsgqNcxzmhIXUDlUGZ
+      password: IzqhlxNy9JsTUbrBizCyIg.SW-RWJ7DLY1Fit8k45g1cR-rHCU3pUp-gkM1LRUef2Oz3j7gen98qIjbk53AkjYAvv79B_oBZoQF0T6Hp9kRiieBa0aDy,4dEZKO1mBB6
+      schema-action: RECREATE_DROP_UNUSED
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+astra.db:
+  id: 1d6d1514-2d95-4b11-8198-202896c079ee-1
+  region: asia-south1
+  keyspace: main
+  application.token: AstraCS:CjMZfLIsgqNcxzmhIXUDlUGZ:8ea5836158a28970f2821f665fb8421d199c6892d9b04975d72a7dd3d014186b
+
+datastax.astra:
+  secure-connect-bundle: secure-connect.zip
